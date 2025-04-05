@@ -1,0 +1,194 @@
+header img {
+    width: 150px;         /* ou o tamanho que quiser */
+    height: 150px;
+    object-fit: cover;    /* garante que a imagem não distorça */
+    border-radius: 50%;
+    border: 3px solid white; /* opcional, só pra dar destaque */
+  }
+  
+
+:root {
+    --primary-color: #182431;
+    --bg-color: #f9f9f9;
+    --text-color: #333;
+    --card-bg: #fff;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+  }
+  
+  header {
+    background-color: var(--primary-color);
+    color: rgb(252, 249, 249);
+    padding: 30px 20px;
+    text-align: center;
+  }
+  
+  header h1 {
+    margin-bottom: 10px;
+    font-size: 2.5rem;
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    position: relative;
+  }
+  
+  nav a::after {
+    content: "";
+    height: 2px;
+    width: 0;
+    background: white;
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    transition: 0.3s ease;
+  }
+  
+  nav a:hover::after {
+    width: 100%;
+  }
+  
+  .container {
+    padding: 60px 20px;
+    max-width: 1000px;
+    margin: auto;
+  }
+  
+  #sobre {
+    text-align: center;
+  }
+  
+  .foto-perfil {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: var(--shadow);
+    margin-bottom: 20px;
+  }
+  
+  .projetos-grid {
+    display: flex;
+    gap: 100px;
+    flex-wrap: wrap;
+    margin-top: 20px;
+    justify-content: center;
+  }
+  
+  .projeto {
+    background-color: var(--card-bg);
+    padding: 20px;
+    flex: 1 1 280px;
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    transition: transform 0.2s ease;
+    color: #0d0d0d;
+  }
+  
+  .projeto:hover {
+    transform: translateY(-5px);
+  }
+  
+  footer {
+    text-align: center;
+    padding: 25px;
+    background-color: var(--primary-color);
+    color: white;
+    margin-top: 50px;
+  }
+  
+  a {
+    color: var(--primary-color);
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    nav ul {
+      flex-direction: column;
+      gap: 12px;
+    }
+  
+    .projetos-grid {
+      flex-direction: column;
+    }
+  }
+
+  /* Fundo interativo com partículas */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #0d0d0d;
+    color: white;
+    position: relative;
+    overflow-x: hidden;
+  }
+  
+  .background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: radial-gradient(circle at center, #1a1a1a 0%, #0d0d0d 100%);
+    overflow: hidden;
+  }
+  
+  .particle {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    animation: float 20s linear infinite;
+  }
+  
+  @keyframes float {
+    0% {
+      transform: translateY(0) scale(1);
+      opacity: 0.3;
+    }
+    50% {
+      opacity: 0.6;
+    }
+    100% {
+      transform: translateY(-100vh) scale(1.2);
+      opacity: 0;
+    }
+  }
+  .container {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2rem;
+    border-radius: 10px;
+    margin: 2rem auto;
+    max-width: 900px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  }
+  
+  
+  

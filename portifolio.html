@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Meu Portfólio</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <header>
+
+    <img src="img/foto.png" alt="">
+    <h1>Tarcisio</h1>
+    <nav>
+      <ul>
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#projetos">Projetos</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="sobre" class="container">
+    <h2>Sobre Mim</h2>
+    <p>👋 Olá! Sou Tarcisio, desenvolvedor apaixonado por tecnologia e design.
+      <br>💻 Trabalho com HTML, CSS e adoro criar sites modernos e responsivos.
+     <br> 🚀 Sempre buscando aprender mais e encarar novos desafios.
+     <br> 🤝 Vamos construir algo incrível juntos?
+      
+      .</p>
+  </section>
+
+  <section id="projetos" class="container">
+    <h2>Projetos</h2>
+    <div class="projetos-grid">
+      <div class="projeto">
+        <h3>Site 01 <h3>
+        <p>Projeto de iniciação de HTML.</p>
+      </div>
+      <div class="projeto">
+        <h3>Site 02</h3>
+        <p>Projeto mediano em HTML.</p>
+      </div>
+      <div class="projeto">
+        <h3>Site 03</h3>
+        <p>Projeto avancado em HTML.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contato" class="container">
+    <h2>Contato</h2>
+    <p>Email: santanaoliveiratarcisio@gmail.com</p>
+    <p>instagram <a href="#">@tarcisioolivex</a></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Tarcisio</p>
+  </footer>
+
+
+  <div class="background" id="background"></div>
+
+<script>
+  const bg = document.getElementById('background');
+
+  for (let i = 0; i < 50; i++) {
+    const particle = document.createElement('div');
+    particle.classList.add('particle');
+    particle.style.left = `${Math.random() * 100}%`;
+    particle.style.top = `${Math.random() * 100 + 100}%`;
+    particle.style.animationDuration = `${10 + Math.random() * 10}s`;
+    particle.style.width = particle.style.height = `${3 + Math.random() * 5}px`;
+    bg.appendChild(particle);
+  }
+</script>
+
+
+</body>
+</html>
+
